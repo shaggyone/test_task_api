@@ -16,13 +16,15 @@ class Api::V1::PostsController < Api::V1::BaseController
     if @post
       respond_with @post
     else
-      render json: { error: "Not found" }
+      render json: { error: "Not found" } # Нужен код ошибки
     end
 
   end
 
   def create
-   respond_with :api, :v1, @post = Post.create(title: params[:title], body: params[:body], published_at: params[:published_at], user_id: current_api_v1_user.id)
+    # Лучше не экономить так место, т.к. читать сложно.
+    # Плюс, а почему ты не используешь post_params?
+    respond_with :api, :v1, @post = Post.create(title: params[:title], body: params[:body], published_at: params[:published_at], user_id: current_api_v1_user.id)
   end
 
 private

@@ -4,12 +4,14 @@ ruby "2.2.2"
 gem 'rails', '4.2.6'
 gem 'pg'
 
+gem 'sdoc', '~> 0.4.0', group: :doc
+
+#  Поскольку речь про api это всё не нужно. Впрочем, я так понимаю, они для девайся нужны?
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem "slim-rails"
 gem 'materialize-sass'
 gem 'jquery-validation-rails'
