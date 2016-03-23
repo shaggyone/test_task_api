@@ -1,3 +1,5 @@
+# Лучше хранить database.example.yaml
+# Т.к. разработчиков может быть много, и использовать их код будет
 default: &default
   adapter: postgresql
   encoding: utf8
